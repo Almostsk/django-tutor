@@ -21,3 +21,8 @@ urlpatterns = [
     path('demo/', include('demoapp.urls')), 
     path('admin/', admin.site.urls),
 ]
+
+handler400 = 'chefsTable.views.handler400'
+handler403 = 'chefsTable.views.handler403'
+handler404 = 'chefsTable.views.handler404'
+handler500 = 'chefsTable.views.handler500'
