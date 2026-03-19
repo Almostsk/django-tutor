@@ -1,5 +1,7 @@
 # Create your views here.
 from django.http import HttpResponse
+from django.shortcuts import render
+from .forms import InputForm
 def home(request):
     path = request.path
     scheme = request.scheme
@@ -34,3 +36,8 @@ def book(request):
     
 def index(request): 
     return HttpResponse("Hello, world.... This is the index view of Demoapp.") 
+
+def form_view(request):
+    form = InputForm()
+    context = {"form": form}
+    return render(request, "home.html", context)
